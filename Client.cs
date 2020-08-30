@@ -6,5 +6,6 @@ namespace ver4_biblTeo
 {
     class Client
     {
+        // gen om care imprumuta
     }
 }
