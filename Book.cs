@@ -11,9 +11,17 @@ namespace ver4_biblTeo
         public string Autor { get; set; }
         public string Detalii { get; set; }
         public bool EsteImprumutata { get; set; }
-        public string SeAflaLa { get; set; }     //ori e in biblioteca, 
+        public Client SeAflaLa { get; set; }     //ori e in biblioteca, 
                                                  //ori e imprumutata la un om si contine datele acestuia
-        public DateTime DataImprumutare { get; set; }   // pt a calcula intarzieri si plm
+                                                 //biblioteca poate fi considerata ca un "client" special, 
+                                                 //io zic ca merge
+
+        public DateTime DataImprumutare
+        {
+            get => this.DataImprumutare;
+            set
+            { /* TODO PUNE CODU PENTRU VERIFICARE A DATELOR */ } 
+        }   // pt a calcula intarzieri si plm
 
         public Book()
         {
@@ -27,8 +35,8 @@ namespace ver4_biblTeo
             this.Titlu = titlu;
             this.Autor = autor;
             this.Detalii = detalii;
-            this.SeAflaLa = seAflaLa;
-
+            // this.SeAflaLa = asta este un nume de client, 
+                // trebuie cautat in baza de date si returnat clientu respectiv
 
             if (this.SeAflaLa.Contains("bib"))
             {
